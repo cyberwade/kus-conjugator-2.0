@@ -268,11 +268,6 @@ function App() {
     return disabled
   }, [allVerbs, filteredCategoriesBase, verbToCategories, filters])
 
-  const hasAnyAnswer = useMemo(
-    () => Object.values(userAnswers).some((v) => v.trim().length > 0),
-    [userAnswers],
-  )
-
   const currentVerb = verbs[currentIndex]
   const currentCategory = currentVerb ? categoriesById[currentVerb.category_id] : undefined
 
